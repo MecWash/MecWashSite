@@ -65,9 +65,28 @@
             border-radius: 10px;
             transition: 0.3s;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .service-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
         .icon-box { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; }
+        
+        /* Preço nos cards */
+        .price-tag {
+            border-top: 1px solid #333;
+            padding-top: 15px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        .price-tag span {
+            display: block;
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: normal;
+        }
 
         /* Galeria Antes e Depois */
         .carousel-item img { height: 500px; object-fit: cover; border-radius: 10px; }
@@ -77,13 +96,14 @@
             border-radius: 5px; color: var(--primary-color); font-weight: bold;
         }
 
-/* Pacotes */
+        /* Pacotes */
         .package-card {
             background: var(--dark-card);
             border: 1px solid #444;
             border-radius: 15px;
             position: relative;
             overflow: hidden;
+            height: 100%; /* Altura igual */
         }
         .package-header { padding: 20px; background: #222; }
         .discount-badge {
@@ -92,7 +112,7 @@
             font-size: 0.8rem; border-radius: 20px;
         }
 
-        /* Floating WhatsApp (9º) */
+        /* Floating WhatsApp */
         .whatsapp-float {
             position: fixed; bottom: 20px; right: 20px;
             background-color: #25d366; color: #fff;
@@ -167,50 +187,87 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="service-card p-4 text-center">
-                        <div class="icon-box"><i class="fas fa-spray-can"></i></div>
-                        <h4>Lavagem Detalhada</h4>
-                        <p class="small text-muted">Externa e Interna</p>
-                        <p>Muito além de água e sabão. Utilizamos pincéis de detalhamento para grades, emblemas e cantos que lavagens comuns ignoram. Descontaminação ferrosa das rodas inclusa.</p>
+                        <div>
+                            <div class="icon-box"><i class="fas fa-car-side"></i></div>
+                            <h4>Lavagem Externa</h4>
+                            <p class="small text-muted">Apenas externo</p>
+                            <p>Limpeza técnica com pH neutro que preserva a proteção da sua pintura ou vitrificação. Detalhamento de rodas, emblemas e secagem segura.</p>
+                        </div>
+                        <div class="price-tag">
+                            Carros R$ 50 | Pickup R$ 80
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="service-card p-4 text-center">
-                        <div class="icon-box"><i class="fas fa-magic"></i></div>
-                        <h4>Polimento Técnico</h4>
-                        <p class="small text-muted">Correção de Pintura</p>
-                        <p>Remoção científica de riscos superficiais, teias de aranha (swirls) e marcas de lavagem incorreta, devolvendo a profundidade da cor e o reflexo espelhado.</p>
+                        <div>
+                            <div class="icon-box"><i class="fas fa-spray-can"></i></div>
+                            <h4>Lavagem Completa</h4>
+                            <p class="small text-muted">Externa e Interna</p>
+                            <p>Muito além de água e sabão. Utilizamos pincéis de detalhamento para grades, emblemas e cantos que lavagens comuns ignoram. Descontaminação ferrosa das rodas inclusa.</p>
+                        </div>
+                        <div class="price-tag">
+                            Carros R$ 80 | Pickup R$ 120
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="service-card p-4 text-center">
-                        <div class="icon-box"><i class="fas fa-gem"></i></div>
-                        <h4>Vitrificação</h4>
-                        <p class="small text-muted">Ceramic & Graphene Coating</p>
-                        <p>Aplicação de nano-proteção à base de sílica ou grafeno. Cria uma barreira contra raios UV, dejetos de pássaros e seiva, com durabilidade de 1 a 5 anos.</p>
+                        <div>
+                            <div class="icon-box"><i class="fas fa-gem"></i></div>
+                            <h4>Vitrificação</h4>
+                            <p class="small text-muted">Ceramic & Graphene Coating</p>
+                            <p>Aplicação de nano-proteção à base de sílica ou grafeno. Cria uma barreira contra raios UV, dejetos de pássaros e seiva, com durabilidade de até 12 meses.</p>
+                        </div>
+                        <div class="price-tag">
+                            Carros R$ 200 | Pickup R$ 250
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="service-card p-4 text-center">
-                        <div class="icon-box"><i class="fas fa-chair"></i></div>
-                        <h4>Higienização Interna</h4>
-                        <p class="small text-muted">Bancos e Couro</p>
-                        <p>Extração de sujeira profunda em tecidos e limpeza técnica de couros com hidratação matte (sem brilho gorduroso), prevenindo rachaduras.</p>
+                        <div>
+                            <div class="icon-box"><i class="fas fa-chair"></i></div>
+                            <h4>Higienização Interna</h4>
+                            <p class="small text-muted">Bancos e Couro</p>
+                            <p>Extração de sujeira profunda em tecidos e limpeza técnica de couros com hidratação matte (sem brilho gorduroso), prevenindo rachaduras.</p>
+                        </div>
+                        <div class="price-tag">
+                            <span>A partir de</span>
+                            R$ 150,00
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="service-card p-4 text-center">
-                        <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
-                        <h4>Revitalização de Faróis</h4>
-                        <p class="small text-muted">Segurança e Estética</p>
-                        <p>Lixamento técnico e proteção UV para restaurar a transparência de lentes amareladas/opacas, melhorando a visibilidade noturna.</p>
+                        <div>
+                            <div class="icon-box"><i class="fas fa-magic"></i></div>
+                            <h4>Revitalização de Plásticos</h4>
+                            <p class="small text-muted">Renovação e Proteção UV</p>
+                            <p>Recuperação da cor original (preto profundo) de para-choques, frisos e acabamentos esbranquiçados, evitando rachaduras futuras.</p>
+                        </div>
+                        <div class="price-tag">
+                            <span>A partir de</span>
+                            R$ 50,00
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="service-card p-4 text-center">
-                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-                        <h4>Aplicação de PPF</h4>
-                        <p class="small text-muted">Paint Protection Film</p>
-                        <p>Película transparente de poliuretano de alta resistência. A proteção máxima contra impactos de pedras, arranhões profundos e vandalismo.</p>
+                        <div>
+                            <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                            <h4>Enceramento Técnico</h4>
+                            <p class="small text-muted">Brilho e Proteção</p>
+                            <p>Aplicação de cera premium (Carnaúba ou Sintética) para criar uma barreira contra sujeira e intensificar a cor do veículo.</p>
+                        </div>
+                        <div class="price-tag">
+                            Carros R$ 120 | Pickup R$ 150
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,52 +277,53 @@
     <section id="pacotes" class="py-5">
         <div class="container">
             <h2 class="text-gold text-center mb-5">Combos Promocionais</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="package-card text-center mb-4">
+            <div class="row g-4"> <div class="col-md-4">
+                    <div class="package-card text-center">
                         <div class="package-header">
                             <h3>Bronze</h3>
-                            <div class="display-6">10% OFF</div>
+                            <div class="display-6 text-gold">10% OFF</div>
                         </div>
                         <div class="p-4">
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-2">Lavagem Detalhada</li>
-                                <li class="mb-2">Cera de Carnaúba</li>
-                                <li class="mb-2">Pretinho Premium</li>
+                                <li class="mb-2 border-bottom border-secondary pb-2">2 Lavagens completas (quinzenal)</li>
+                                <li class="mb-2 border-bottom border-secondary pb-2">Enceramento técnico</li>
+                                <li class="mb-2">Aplicação de pretinho</li>
                             </ul>
-                            <a href="#agendamento" class="btn btn-outline-light w-100">Escolher</a>
+                            <a href="#agendamento" class="btn btn-outline-light w-100">Escolher Bronze</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="package-card text-center mb-4 border-warning">
+                    <div class="package-card text-center border-warning" style="transform: scale(1.02); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);">
                         <div class="package-header bg-gold">
                             <h3>Prata</h3>
-                            <div class="display-6">15% OFF</div>
-                        </div>
-                        <div class="p-4">
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">Tudo do Bronze</li>
-                                <li class="mb-2">Higienização Interna</li>
-                                <li class="mb-2">Limpeza de Motor a Seco</li>
-                            </ul>
-                            <a href="#agendamento" class="btn btn-gold w-100">Escolher</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="package-card text-center mb-4">
-                        <div class="package-header">
-                            <h3>Ouro</h3>
                             <div class="display-6">20% OFF</div>
                         </div>
                         <div class="p-4">
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-2">Polimento Técnico</li>
-                                <li class="mb-2">Vitrificação (3 anos)</li>
-                                <li class="mb-2">Higienização Completa</li>
+                                <li class="mb-2 border-bottom border-secondary pb-2">4 Lavagens completas (semanal)</li>
+                                <li class="mb-2 border-bottom border-secondary pb-2">Enceramento técnico</li>
+                                <li class="mb-2">Restauração dos plásticos</li>
                             </ul>
-                            <a href="#agendamento" class="btn btn-outline-light w-100">Escolher</a>
+                            <a href="#agendamento" class="btn btn-gold w-100">Escolher Prata</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="package-card text-center">
+                        <div class="package-header">
+                            <h3>Ouro</h3>
+                            <div class="display-6 text-gold">25% OFF</div>
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 border-bottom border-secondary pb-2"><strong>Tudo do pacote Prata +</strong></li>
+                                <li class="mb-2 border-bottom border-secondary pb-2">Higienização Interna</li>
+                                <li class="mb-2">Enceramento ou Vitrificação</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-outline-light w-100">Escolher Ouro</a>
                         </div>
                     </div>
                 </div>
@@ -389,11 +447,15 @@
                                     <label>Serviço de Interesse</label>
                                     <select id="servico" class="form-select bg-secondary text-white border-0">
                                         <option value="Avaliação Geral">Não tenho certeza, preciso de avaliação</option>
-                                        <option value="Pacote Ouro">Pacote Ouro (Completo)</option>
-                                        <option value="Pacote Prata">Pacote Prata</option>
-                                        <option value="Polimento">Polimento Técnico</option>
+                                        <option value="Lavagem Externa">Lavagem Externa</option>
+                                        <option value="Lavagem Completa">Lavagem Completa</option>
                                         <option value="Vitrificação">Vitrificação</option>
-                                        <option value="Higienização">Higienização Interna</option>
+                                        <option value="Higienização Interna">Higienização Interna</option>
+                                        <option value="Revitalização de Plásticos">Revitalização de Plásticos</option>
+                                        <option value="Enceramento técnico">Enceramento técnico</option>
+                                        <option value="Combo Bronze">Combo Bronze</option>
+                                        <option value="Combo Prata">Combo Prata</option>
+                                        <option value="Combo Ouro">Combo Ouro</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -430,12 +492,12 @@
                 <div class="col-md-4 mb-4">
                     <h5 class="text-white">Localização</h5>
                     <div class="bg-secondary" style="height: 150px; display: flex; align-items: center; justify-content: center; color: #fff;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117368.19139318424!2d-46.90704755575936!3d-23.179104599759235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf24293cc00531%3A0xf686a1c1163c6bbb!2zSnVuZGlhw60gLSBBZ2xvbWVyYcOnw6NvIFVyYmFuYSBkZSBKdW5kaWHDrSwgSnVuZGlhw60gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1767120952999!5m2!1spt-BR!2sbr" width="420" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.076899732785!2d-46.8922894!3d-23.1896798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDExJzIyLjgiUyA0NsKwNTMnMzIuMiJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
             <div class="text-center pt-4 border-top border-secondary mt-4">
-                <small class=color: #fff;"text-muted">&copy; 2024 MecWash Jundiaí. Todos os direitos reservados.</small>
+                <small class=color: #fff;"text-muted">© 2026 MecWash Jundiaí. Todos os direitos reservados.</small>
             </div>
         </div>
     </footer>
@@ -443,15 +505,6 @@
     <a href="https://wa.me/5511945056266" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -464,7 +517,7 @@
             const servico = document.getElementById('servico').value;
             const msg = document.getElementById('msg').value;
 
-            // Número do WhatsApp da empresa (substituir pelo real)
+            // Número do WhatsApp da empresa
             const telefone = "5511945056266"; 
             
             const texto = `*Olá, vim pelo site!*%0A%0A*Nome:* ${nome}%0A*Carro:* ${carro}%0A*Interesse:* ${servico}%0A*Detalhes:* ${msg}%0A%0AGostaria de um orçamento/agendamento.`;
