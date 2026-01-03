@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melhor Estética Automotiva em Jundiaí. Polimento, Vitrificação, Higienização e PPF. Atendimento Premium e Delivery.">
+    <meta name="keywords" content="estética automotiva em Jundiai, polimento, vitrificação, lavagem detalhada, carros de luxo">
+    <title>MecWash - Estética Automotiva em Jundiaí</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Dourado Premium */
+            --dark-bg: #111111;
+            --dark-card: #1a1a1a;
+            --text-light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Tipografia e Cores */
+        h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 1px; }
+        .text-gold { color: var(--primary-color) !important; }
+        .bg-gold { background-color: var(--primary-color) !important; color: #000; }
+        .btn-gold {
+            background-color: var(--primary-color);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 10px 30px;
+            transition: 0.3s;
+        }
+        .btn-gold:hover { background-color: #b39028; color: #fff; transform: scale(1.05); }
+
+        /* Navbar */
+        .navbar { background-color: rgba(0, 0, 0, 0.95); border-bottom: 1px solid #333; }
+        .nav-link { color: #fff !important; font-size: 0.9rem; transition: 0.3s; }
+        .nav-link:hover { color: var(--primary-color) !important; }
+
+        /* Hero Section (1º) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://www.ruff.com.br/wp-content/uploads/2022/11/produto-para-limpar-carros-por-dentro-scaled.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+
+        /* Serviços Cards */
+        .service-card {
+            background-color: var(--dark-card);
+            border: 1px solid #333;
+            border-radius: 10px;
+            transition: 0.3s;
+            height: 100%;
+        }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+        .icon-box { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; }
+
+        /* Galeria Antes e Depois */
+        .carousel-item img { height: 500px; object-fit: cover; border-radius: 10px; }
+        .ba-label {
+            position: absolute; top: 20px; left: 20px;
+            background: rgba(0,0,0,0.8); padding: 5px 15px;
+            border-radius: 5px; color: var(--primary-color); font-weight: bold;
+        }
+
+/* Pacotes */
+        .package-card {
+            background: var(--dark-card);
+            border: 1px solid #444;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .package-header { padding: 20px; background: #222; }
+        .discount-badge {
+            position: absolute; top: 10px; right: 10px;
+            background: #d63384; color: #fff; padding: 5px 10px;
+            font-size: 0.8rem; border-radius: 20px;
+        }
+
+        /* Floating WhatsApp (9º) */
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: #25d366; color: #fff;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 1000; transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: #fff; }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .carousel-item img { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-gold fw-bold" href="#"><i class=""></i> MecWash</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pacotes">Pacotes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#delivery">Delivery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="text-white">O Brilho de Showroom <br>Que Seu Carro Merece</h1>
+            <p class="lead mb-4">Especialistas em Estética Automotiva de Alta Performance em Jundiaí.</p>
+            <a href="#agendamento" class="btn btn-gold btn-lg">Agende seu Horário</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="text-gold mb-3">Nossa História & Missão</h2>
+                    <p>A MecWash nasceu da paixão por detalhes. Nossa missão é elevar o padrão da estética automotiva em Jundiaí, oferecendo não apenas limpeza, mas a verdadeira restauração e proteção do seu patrimônio.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-gold"></i> Usamos apenas produtos e equipamentos de primeira linha.</li>
+                        <li><i class="fas fa-check text-gold"></i> Clareza total sobre os processos realizados no veículo.</li>
+                        <li><i class="fas fa-check text-gold"></i> Atualização constante com as tendências mundiais do detailing.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://placehold.co/600x400/1a1a1a/d4af37?text=Equipe+Especializada" alt="Equipe trabalhando" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-5 bg-darker">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-gold">Nossos Serviços Técnicos</h2>
+                <p>Procedimentos de alto padrão para cada necessidade do seu veículo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card p-4 text-center">
+                        <div class="icon-box"><i class="fas fa-spray-can"></i></div>
+                        <h4>Lavagem Detalhada</h4>
+                        <p class="small text-muted">Externa e Interna</p>
+                        <p>Muito além de água e sabão. Utilizamos pincéis de detalhamento para grades, emblemas e cantos que lavagens comuns ignoram. Descontaminação ferrosa das rodas inclusa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4 text-center">
+                        <div class="icon-box"><i class="fas fa-magic"></i></div>
+                        <h4>Polimento Técnico</h4>
+                        <p class="small text-muted">Correção de Pintura</p>
+                        <p>Remoção científica de riscos superficiais, teias de aranha (swirls) e marcas de lavagem incorreta, devolvendo a profundidade da cor e o reflexo espelhado.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4 text-center">
+                        <div class="icon-box"><i class="fas fa-gem"></i></div>
+                        <h4>Vitrificação</h4>
+                        <p class="small text-muted">Ceramic & Graphene Coating</p>
+                        <p>Aplicação de nano-proteção à base de sílica ou grafeno. Cria uma barreira contra raios UV, dejetos de pássaros e seiva, com durabilidade de 1 a 5 anos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4 text-center">
+                        <div class="icon-box"><i class="fas fa-chair"></i></div>
+                        <h4>Higienização Interna</h4>
+                        <p class="small text-muted">Bancos e Couro</p>
+                        <p>Extração de sujeira profunda em tecidos e limpeza técnica de couros com hidratação matte (sem brilho gorduroso), prevenindo rachaduras.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4 text-center">
+                        <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Revitalização de Faróis</h4>
+                        <p class="small text-muted">Segurança e Estética</p>
+                        <p>Lixamento técnico e proteção UV para restaurar a transparência de lentes amareladas/opacas, melhorando a visibilidade noturna.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4 text-center">
+                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Aplicação de PPF</h4>
+                        <p class="small text-muted">Paint Protection Film</p>
+                        <p>Película transparente de poliuretano de alta resistência. A proteção máxima contra impactos de pedras, arranhões profundos e vandalismo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pacotes" class="py-5">
+        <div class="container">
+            <h2 class="text-gold text-center mb-5">Combos Promocionais</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="package-card text-center mb-4">
+                        <div class="package-header">
+                            <h3>Bronze</h3>
+                            <div class="display-6">10% OFF</div>
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">Lavagem Detalhada</li>
+                                <li class="mb-2">Cera de Carnaúba</li>
+                                <li class="mb-2">Pretinho Premium</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-outline-light w-100">Escolher</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="package-card text-center mb-4 border-warning">
+                        <div class="package-header bg-gold">
+                            <h3>Prata</h3>
+                            <div class="display-6">15% OFF</div>
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">Tudo do Bronze</li>
+                                <li class="mb-2">Higienização Interna</li>
+                                <li class="mb-2">Limpeza de Motor a Seco</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-gold w-100">Escolher</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="package-card text-center mb-4">
+                        <div class="package-header">
+                            <h3>Ouro</h3>
+                            <div class="display-6">20% OFF</div>
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">Polimento Técnico</li>
+                                <li class="mb-2">Vitrificação (3 anos)</li>
+                                <li class="mb-2">Higienização Completa</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-outline-light w-100">Escolher</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-darker">
+        <div class="container">
+            <h2 class="text-gold text-center mb-4">Resultados Reais</h2>
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-6 position-relative">
+                                <span class="ba-label">ANTES</span>
+                                <img src="https://placehold.co/600x500/333/fff?text=Pintura+Opaca+e+Riscada" class="d-block w-100" alt="Antes">
+                            </div>
+                            <div class="col-6 position-relative">
+                                <span class="ba-label">DEPOIS</span>
+                                <img src="https://placehold.co/600x500/1a1a1a/d4af37?text=Espelhamento+Perfeito" class="d-block w-100" alt="Depois">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-6 position-relative">
+                                <span class="ba-label">ANTES</span>
+                                <img src="https://placehold.co/600x500/554940/fff?text=Couro+Sujo" class="d-block w-100" alt="Antes Interior">
+                            </div>
+                            <div class="col-6 position-relative">
+                                <span class="ba-label">DEPOIS</span>
+                                <img src="https://placehold.co/600x500/222/d4af37?text=Couro+Limpo+e+Fosco" class="d-block w-100" alt="Depois Interior">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="delivery" class="py-5">
+        <div class="container bg-secondary bg-opacity-10 p-5 rounded">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="text-gold">MecWash Delivery</h2>
+                    <h4>Levamos a estética até sua garagem</h4>
+                    <p>Não tem tempo de trazer o carro? Nossa unidade móvel vai até você em Jundiaí e região. Levamos nossos equipamentos até você, ideal para condomínios e casas.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-truck-pickup fa-5x text-gold mb-3"></i>
+                    <br>
+                    <a href="#agendamento" class="btn btn-outline-light">Solicitar Delivery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-gold">O que nossos clientes dizem</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white p-3 mb-3 border-secondary">
+                        <div class="d-flex text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"Serviço impecável! A vitrificação mudou a cara do meu carro. Atendimento nota 10 em Jundiaí."</p>
+                        <small>- Carlos Almeida (via Google)</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white p-3 mb-3 border-secondary">
+                        <div class="d-flex text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"Fiz a higienização dos bancos de couro e parecem novos. Recomendo muito o pacote Prata."</p>
+                        <small>- Fernanda Souza (via Google)</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white p-3 mb-3 border-secondary">
+                        <div class="d-flex text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"Profissionais honestos e pontuais. O delivery funcionou perfeitamente no meu condominio."</p>
+                        <small>- Roberto Lima (via Google)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendamento" class="py-5 bg-gold">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-dark text-light shadow-lg">
+                        <div class="card-body p-5">
+                            <h2 class="text-center text-gold mb-4">Solicitar agendamento</h2>
+                            <p class=color: #ccc;"text-center text-muted mb-4">Preencha abaixo para iniciar seu atendimento via WhatsApp com os dados já prontos.</p>
+                            
+                            <form id="whatsappForm" onsubmit="enviarWhatsapp(event)">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label>Seu Nome</label>
+                                        <input type="text" id="nome" class="form-control bg-secondary text-white border-0" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>Modelo do Carro</label>
+                                        <input type="text" id="carro" class="form-control bg-secondary text-white border-0" placeholder="Ex: Honda Civic" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Serviço de Interesse</label>
+                                    <select id="servico" class="form-select bg-secondary text-white border-0">
+                                        <option value="Avaliação Geral">Não tenho certeza, preciso de avaliação</option>
+                                        <option value="Pacote Ouro">Pacote Ouro (Completo)</option>
+                                        <option value="Pacote Prata">Pacote Prata</option>
+                                        <option value="Polimento">Polimento Técnico</option>
+                                        <option value="Vitrificação">Vitrificação</option>
+                                        <option value="Higienização">Higienização Interna</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Descreva o problema (Opcional)</label>
+                                    <textarea id="msg" class="form-control bg-secondary text-white border-0" rows="3" placeholder="Ex: Riscos na porta, banco manchado..."></textarea>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i> Enviar solicitação</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-black py-5 border-top border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="text-gold">MecWash</h4>
+                    <p>Estética automotiva de referência em Jundiaí e região. Transformamos carros em obras de arte.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">Contato</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li><i class="fab fa-whatsapp text-gold"></i> (11) 94505-6266</li>
+                        <li><i class="fas fa-map-marker-alt text-gold"></i> Atendemos na região de Jundiaí, SP</li>
+                        <li><i class="far fa-clock text-gold"></i> Seg a Sex: 08h - 18h | Sáb e Dom: 08h - 16h</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">Localização</h5>
+                    <div class="bg-secondary" style="height: 150px; display: flex; align-items: center; justify-content: center; color: #fff;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117368.19139318424!2d-46.90704755575936!3d-23.179104599759235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf24293cc00531%3A0xf686a1c1163c6bbb!2zSnVuZGlhw60gLSBBZ2xvbWVyYcOnw6NvIFVyYmFuYSBkZSBKdW5kaWHDrSwgSnVuZGlhw60gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1767120952999!5m2!1spt-BR!2sbr" width="420" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-4 border-top border-secondary mt-4">
+                <small class=color: #fff;"text-muted">&copy; 2024 MecWash Jundiaí. Todos os direitos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511945056266" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function enviarWhatsapp(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const carro = document.getElementById('carro').value;
+            const servico = document.getElementById('servico').value;
+            const msg = document.getElementById('msg').value;
+
+            // Número do WhatsApp da empresa (substituir pelo real)
+            const telefone = "5511945056266"; 
+            
+            const texto = `*Olá, vim pelo site!*%0A%0A*Nome:* ${nome}%0A*Carro:* ${carro}%0A*Interesse:* ${servico}%0A*Detalhes:* ${msg}%0A%0AGostaria de um orçamento/agendamento.`;
+
+            const url = `https://wa.me/${telefone}?text=${texto}`;
+            
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
